@@ -103,11 +103,12 @@ OBJS = colors.o data.o death.o defaults.o defwin.o detonate.o dmessage.o \
        $(SP_OBJS) $(DASHBOARD_OBJS) $(FONTBITMAP_OBJS) $(META_OBJS) \
        $(RECORD_OBJS)
 
-AllTarget(randomize)
-NormalProgramTarget(randomize,randomize.o $(RAND_OBJS),,,)
+/*AllTarget(randomize)*/
+/*NormalProgramTarget(randomize,randomize.o $(RAND_OBJS),,,)*/
 
 AllTarget($(TARGET))
-NormalProgramTargetRandomize($(TARGET),$(OBJS),,,,./randomize)
+/*NormalProgramTargetRandomize($(TARGET),$(OBJS),,,,./randomize)*/
+NormalProgramTarget($(TARGET),$(OBJS),,,)
 InstallProgram($(TARGET),$(NETREK_BIN))
 DependTarget()
 
