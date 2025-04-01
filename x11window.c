@@ -18,6 +18,7 @@
 #include <netinet/tcp.h>
 #endif
 #include <assert.h>
+#include <unistd.h>
 #include "netrek.h"
 
 #define MAX_TEXT_WIDTH		90
@@ -518,7 +519,7 @@ checkGeometry(name, x, y, width, height)
    int *x, *y, *width, *height;
 {  
    char	buf[160], *geom_default;
-   register	i;
+   register int	i;
    int		mask;
 
    sprintf(buf,"%s.geometry",name);
@@ -1773,7 +1774,7 @@ W_FlushLineCaches(window)
     W_Window        window;
 {
    Window          win = W_Void2Window(window)->window;
-   register        i;
+   register int    i;
    for (i = 0; i < NCOLORS; i++) {
       if (_lcache_index[i])
 	 FlushLineCache(win, i);
@@ -2264,7 +2265,7 @@ W_FlushScrollingWindow(window)
 #ifndef NO_COPYAREA
    else {
       register struct stringList	*item;
-      register			y;
+      register int			y;
    
       if(win->height > sw->updated){
 	 XCopyArea(W_Display, win->window, win->window, 
@@ -2301,7 +2302,7 @@ drawThumb(win, sw)
    struct window		*win;
    struct scrollingWindow	*sw;
 {
-   register	x, y, h;
+   register int	x, y, h;
    int		savedlines, maxrow,
 		thumbTop, thumbHeight, totalHeight,
 		winheight;
@@ -3050,7 +3051,7 @@ W_ReinitMenu(window, neww, newh)
 {
    struct window	*win = W_Void2Window(window);
    struct menuItem	*items;
-   register		i;
+   register int		i;
 
    items = (struct menuItem *) win->data;
    for(i=0; i< win->height; i++){

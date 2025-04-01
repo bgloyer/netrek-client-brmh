@@ -27,6 +27,7 @@
 #include <math.h>
 #include <signal.h>
 #include <ctype.h>
+#include <string.h>
 #include <X11/XKBlib.h>
 #include "netrek.h"
 
@@ -253,7 +254,7 @@ smessage(ichar)
 void
 smess_paste()
 {
-   register	i, nl=0;
+   register int	i, nl=0;
    int		len, toowide;
    char		*s, *m = s = W_FetchBuffer(&len);
 

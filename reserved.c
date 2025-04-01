@@ -5,6 +5,8 @@
  */
 #include "copyright2.h"
 #include <stdio.h>
+#include <arpa/inet.h>
+#include <strings.h> // for bcopy
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>

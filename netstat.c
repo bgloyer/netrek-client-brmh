@@ -13,6 +13,7 @@
 #include <netdb.h>
 #include <math.h>
 #include <errno.h>
+#include <string.h>
 #include "netrek.h"
 
 /*

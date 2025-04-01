@@ -3,6 +3,7 @@
  */
 #include "copyright.h"
 #include <stdio.h>
+#include <string.h>
 #include "netrek.h"
 
 static char    *teamname[9] =

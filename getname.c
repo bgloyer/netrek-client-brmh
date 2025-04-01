@@ -10,15 +10,12 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/file.h>
-#ifdef hpux
 #include <time.h>
-#else
-#include <sys/time.h>
-#endif
 #include <errno.h>
 #include <pwd.h>
 #include <string.h>
 #include <ctype.h>
+#include <unistd.h>
 #include "netrek.h"
 
 static char     tempname[16];

@@ -26,6 +26,7 @@
 #include <ctype.h>
 #include <sys/types.h>
 #include <netinet/in.h>
+#include <string.h>
 #include "copyright.h"
 
 #if defined (_IBMR2) || defined(SYSV)
@@ -186,7 +187,7 @@ feature_cmp(f, s)
 void
 showFeatures()
 {
-   register 			i = 0;
+   register int			i = 0;
    register struct feature 	*f;
    char				buf[80], *title;
 

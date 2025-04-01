@@ -12,12 +12,12 @@
 #ifndef sgi
 #include <sys/timeb.h>
 #endif
+#include <string.h>
 #include "netrek.h"
 
 #ifdef RECORD
 #include "recorder.h"
 #endif
-
 int basetime = 0;
 
 void

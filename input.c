@@ -9,11 +9,7 @@
 #include <string.h>
 #include <math.h>
 #include <sys/types.h>
-#ifdef hpux
 #include <time.h>
-#else				/* hpux */
-#include <sys/time.h>
-#endif				/* hpux */
 #include <signal.h>
 #include <errno.h>
 #include "netrek.h"
@@ -51,7 +47,7 @@ unsigned char  *
 InitKeyMap(keyMap)
    unsigned char  *keyMap;
 {
-   register        i;
+   register int       i;
    unsigned char  *defaultMap;
 
    if (!keyMap) {
@@ -244,7 +240,7 @@ initkeymaps()
      */
 {
    unsigned char  *str;
-   register        i;
+   register int    i;
    char            buf[80];
 
 
@@ -570,7 +566,7 @@ keyaction(data)
    register W_Window win = data->Window;
    register unsigned char key = data->key;
    static int      last_det;
-   register        now;
+   register int    now;
 
    if ((infow && win == infow)
 #ifdef SCAN

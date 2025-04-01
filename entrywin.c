@@ -12,12 +12,9 @@
 #include <math.h>
 #include <signal.h>
 #include <sys/types.h>
-#ifdef hpux
 #include <time.h>
-#else				/* hpux */
-#include <sys/time.h>
-#endif				/* hpux */
 #include "netrek.h"
+#include "playerlist.h"
 
 #include "bitmaps/clockbitmap.h"
 
@@ -623,7 +620,7 @@ showPics(win, l)
     int			l;
 {
    struct piclist *temp;
-   register	   x,y;
+   register int	   x,y;
 
    temp = motdPics;
 

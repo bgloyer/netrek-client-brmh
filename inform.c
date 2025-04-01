@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <signal.h>
+#include <string.h>
 #include "netrek.h"
 
 /* Display information about the nearest object to mouse */

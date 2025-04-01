@@ -1,3 +1,5 @@
+#ifndef _playerlist.h_
+#define _playerlist_h_
 /* DO NOT DELETE THIS LINE -- fcproto uses it. */
 /* DO NOT PUT ANYTHING AFTER THIS LINE, IT WILL GO AWAY. */
 #if __STDC__ || defined(__cplusplus)
