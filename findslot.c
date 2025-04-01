@@ -12,11 +12,7 @@
 #include <pwd.h>
 #include <string.h>
 #include <ctype.h>
-#ifdef hpux
 #include <time.h>
-#else                           /* hpux */
-#include <sys/time.h>
-#endif
 #include "netrek.h"
 
 #ifdef EM

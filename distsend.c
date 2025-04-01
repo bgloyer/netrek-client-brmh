@@ -188,7 +188,7 @@ doMacro(key, data)
    W_Event      *data;
 {
    int          found = 0;
-   register     c;
+   register int c;
    struct obtype *gettarget(), *target = NULL;
    char         who;
    int          targettype;
@@ -455,7 +455,7 @@ pnbtmacro(c)
 int
 rcd_lines()
 {
-   register			i;
+   register int			i;
    register struct dmacro_list  *d;
    for(i=0, d=&dist_prefered[1]; d->c; i++,d++)
       ;
@@ -467,7 +467,7 @@ showRCDs(row)
 
    int	row;
 {
-   register                     i, j;
+   register int                 i, j;
    register struct dmacro_list  *d;
    char                         buf[BUFSIZ], buf2[3], *title;
 

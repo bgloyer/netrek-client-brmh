@@ -6,6 +6,7 @@
 #include "copyright.h"
 
 #include <stdio.h>
+#include <string.h>
 #ifndef __DARWIN__
 #include <values.h>
 #endif

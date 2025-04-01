@@ -7,6 +7,7 @@
 #include "copyright2.h"
 
 #include <stdio.h>
+#include <string.h>
 #include "netrek.h"
 
 void

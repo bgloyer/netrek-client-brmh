@@ -11,11 +11,7 @@
 #include <signal.h>
 #include <setjmp.h>
 #include <pwd.h>
-#ifdef hpux
 #include <time.h>
-#else	/* hpux */
-#include <sys/time.h>
-#endif				/* hpux */
 #ifndef hpux
 #include <sys/wait.h>
 #endif				/* hpux */

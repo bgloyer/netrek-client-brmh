@@ -553,7 +553,7 @@ optionaction(data)
       
 #ifdef ROTATERACE
       if (op->op_option == &rotate && rotate != old_rotate) {
-	 register        i;
+	 register int    i;
 	 register struct planet 	*l;
 	 register struct player	*j;
 

@@ -13,6 +13,7 @@
 #include <sys/time.h>
 #include <X11/Xlib.h>
 #include "netrek.h"
+#include "playerlist.h"
 
 #ifdef RECORD
 #include "recorder.h"
@@ -25,7 +26,7 @@
 #endif
 
 /* redraw.c */
-static void get_shrink_phaser_coords P_((int *rx, int *ry, register dx, register dy, register tx, register ty, register curr_fuse, register max_fuse));
+static void get_shrink_phaser_coords P_((int *rx, int *ry, register int dx, register int dy, register int tx, register int ty, register int curr_fuse, register int max_fuse));
 
 #undef P_
 
@@ -1838,7 +1839,7 @@ itof22(s, f)
     char           *s;
     double           f;
 {
-   register		shift = 0;
+   register int		shift = 0;
 
    if(f >= 100.){
       f /= 10;
@@ -1889,7 +1890,7 @@ setup_redraw_map(xl, yu, xr, yd)
       redrawall = 2;
       return;
    } else {
-      register        i, k, l, x, y;
+      register int    i, k, l, x, y;
       register struct player *j;
 
       xl *= (GWIDTH / WINSIDE);
@@ -1924,7 +1925,7 @@ setup_redraw_map(xl, yu, xr, yd)
 static void
 get_shrink_phaser_coords(rx, ry, dx, dy, tx, ty, curr_fuse, max_fuse)
     int            *rx, *ry;
-    register        dx, dy, tx, ty, curr_fuse, max_fuse;
+    register int    dx, dy, tx, ty, curr_fuse, max_fuse;
 {
    extern double   rint(), hypot();
    register int    ph_dir, range;

@@ -287,7 +287,7 @@ mapAll()
 void
 updateWindows()
 {
-   register        i;
+   register int       i;
 
    W_UpdateWindow(baseWin);
    W_UpdateWindow(iconWin);
@@ -756,7 +756,7 @@ savebitmaps()
 void
 savepuckbitmap()
 {
-   register	i;
+   register int	i;
    if(!puck_bitmaps[0]){
       for (i = 0; i < VIEWS; i++) {
 	 puck_bitmaps[i] = W_StoreBitmap(puck_width, puck_height, 

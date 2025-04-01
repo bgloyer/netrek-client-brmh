@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 #include "netrek.h"
 
 #define L_VTEXT			3	/* width of vertical text */
@@ -38,7 +39,7 @@ lMeterWidth()
 void
 redrawLMeter()
 {
-   register        i;
+   register int	   i;
    char            buf[8];
 
    W_ClearWindow(lMeter);

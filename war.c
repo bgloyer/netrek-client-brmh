@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <signal.h>
+#include <string.h>
 #include "netrek.h"
 
 static int      newhostile;

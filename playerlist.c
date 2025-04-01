@@ -375,7 +375,7 @@ pline(j, pos)
 void
 Sorted_playerlist3()
 {
-   register                     h, i;
+   register int                 h, i;
    register int                 p = -1;
    register struct player       *j;
    static int Pos[MAXPLAYER];
@@ -486,7 +486,7 @@ Sorted_playerlist3()
 void
 Sorted_playerlist2()
 {
-   register                     h, i, x;
+   register int                 h, i, x;
    register int                 p = -1;
    register struct player       *j;
    static int Pos[MAXPLAYER + 1];

@@ -5,6 +5,7 @@
 
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
 #include "netrek.h"
 
 #ifdef PING

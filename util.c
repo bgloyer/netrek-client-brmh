@@ -70,7 +70,7 @@ int targtype;
     register int i;
     register struct player *j;
     register struct planet *k;
-    register dist, closedist;	/* was double, int is big enough */
+    register int dist, closedist;	/* was double, int is big enough */
     int friendly;
 
     closedist = GWIDTH;
@@ -183,7 +183,7 @@ int
 ihypot(x1, y1)
    int x1, y1;
 {
-   register     x2 = 0,
+   register int x2 = 0,
                 y2 = 0;
 
    if ((x2 -= x1) < 0) x2 = -x2;

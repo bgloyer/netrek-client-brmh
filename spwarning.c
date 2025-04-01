@@ -4,6 +4,7 @@
 #include <sys/types.h>
 #include <math.h>
 #include <errno.h>
+#include <string.h>
 #include "netrek.h"
 
 #include "sp.h"

@@ -8,17 +8,14 @@
 #include <pwd.h>
 #include <string.h>
 #include <ctype.h>
-#ifdef hpux
 #include <time.h>
-#else				/* hpux */
-#include <sys/time.h>
-#endif
 #include <sys/signal.h>
 #include <sys/socket.h>
 #include <sys/wait.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <netdb.h>
+#include <unistd.h>
 
 #include "netrek.h"
 
@@ -691,7 +688,7 @@ show_playerlist(sock)
    int	sock;
 {
    char		*s;
-   register	l;
+   register int	l;
    char		line[BUFSIZ];
    FILE		*fsock;
    W_Color	color;

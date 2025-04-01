@@ -19,6 +19,9 @@
 #include <arpa/inet.h>
 #include <math.h>
 #include <errno.h>
+#include <string.h>
+#include <strings.h>
+#include <unistd.h>
 #include "netrek.h"
 
 #ifdef SHORT_PACKETS
@@ -65,6 +68,10 @@ void            exit(int status);
 #ifdef RECORD
 #include "recorder.h"
 #endif RECORD
+
+int connUdpConn();
+void savepuckbitmap();
+
 
 #ifdef SHORT_PACKETS
 static char     numofbits[256] =

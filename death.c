@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <signal.h>
 #include <setjmp.h>
+#include <string.h>
 #include <sys/types.h>
 #ifdef hpux
 #include <time.h>
@@ -30,7 +31,7 @@ void
 show_death()
 
 {
-   register	x=50, y=80;
+   register int	x=50, y=80;
 
    if(*death_mesg1)
       W_MaskText(mapw, x, y, W_Cyan, death_mesg1, 
